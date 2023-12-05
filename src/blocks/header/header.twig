@@ -1,0 +1,47 @@
+<header class="header">
+	<div class="header-wraper">
+		<div class="header-top--border">
+			<nav class="header-top">
+				<ul class="header-top__menu">
+					<li class="header-top__menu-link"> <a href="#"> <img src="./svg/header/geo.svg" alt="" class=""> Москва </a> </li>
+					<li class="header-top__menu-link"> <a href="#"><img src="./svg/header/delivery.svg" alt="" class=""> Доставка и оплата</a> </li>
+					<li class="header-top__menu-link"> <a href="#"> <img src="./svg/header/adress.svg" alt="" class=""> Адрес и часы работы</a></li>
+				</ul>
+				<div class="header-top__links">
+					<a href="mailto:market@estatut.ru"><img src="./svg/header/mail.svg" alt=""> market@estatut.ru</a>
+					<a href="tel:8 (968) 660-65-50"><img src="./svg/header/phone.svg" alt="">8 (968) 660-65-50 <img  class="header-top__links-mod" src="./svg/header/info.svg" alt="">  </a>
+				</div>
+			</nav>
+		</div>
+		<div class="header-wraper__block cont">
+			<div class="header-img">
+				<a href="#" class="header-nav__burger"><img src="./svg/header/burger.svg" alt="" class="header-nav__burger-pic"></a>
+				<img src="./svg/header/logo.svg" alt="" class="header-logo">
+			</div>
+			<form action="" class="header-search">
+				<input placeholder="Что будем искать?" type="text" class="header-input">
+				<button class="header-btn"><img src="./svg/header/search.svg" alt="" class="header-btn__pic"></button>
+			</form>
+			<form action="" class="header-form">
+				<input placeholder="Автор, название, ISBN" type="text" class="header-form__input">
+				<button class="header-form__btn"> <div class="header-form__btn--img">{% include '@assets/svg/header/search.svg' %}</div> <p class="header-form__btn--text">Искать</p></button>
+			</form>
+			<div class="header-icons">
+				<a href="#" class="header-icons__shop">{% include '@assets/svg/header/zakladka.svg' %} <p class="header-icons__text">Отложено</p></a>
+				<a href="#" class="header-icons__shop">{% include '@assets/svg/header/smile.svg' %} <p class="header-icons__text">Войти</p> </a>
+				<a href="#" class="header-icons__shop icons__shop--mod">{% include '@assets/svg/header/shoping.svg' %} <p class="header-icons__text">Корзина</p> </a>
+			</div>
+		</div>
+		<nav class="header-nav cont">
+			<a href="#" class="header-nav__burger"><img src="./svg/header/burger.svg" alt="" class="header-nav__burger-pic"></a>
+			<ul class="header-nav__list">
+				<li class="header-nav__list-item"><a href="#">Каталог</a></li>
+				<li class="header-nav__list-item"><a href="#">Авторы</a></li>
+				<li class="header-nav__list-item"><a href="#">Новинки</a></li>
+				<li class="header-nav__list-item header-nav__list-item--mod"> <img src="./svg/header/discount.svg" alt=""> <a href="#">Скидки</a></li>
+				<li class="header-nav__list-item"><a href="#">Партнёрам</a></li>
+				<li class="header-nav__list-item"><a href="#">Мы</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>

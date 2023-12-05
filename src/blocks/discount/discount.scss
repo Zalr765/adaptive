@@ -1,0 +1,95 @@
+.discount
+{
+	background-color: #0288D1;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+	margin-bottom: 30px;
+	max-width: 1140px;
+}
+.discount-text
+{
+	color: white;
+	margin: 0;
+	margin-top: 20px;
+	font-family: Roboto;
+	font-size: 18px;
+	font-weight: 700;
+	position: relative;
+	z-index: 1;
+}
+.discount-text--bg
+{
+    top: 18px;
+    left: 60px;
+	position: absolute;
+}
+.discount-form
+{
+	display: flex;
+	flex-direction: column;
+}
+.discount-form__input
+{
+	height: 40px;
+	font-family: Roboto;
+	font-size: 14px;
+	font-weight: 400;
+	color: #1C294D80;
+	border-radius: 5px;
+	border: 1px solid white;
+	margin: 10px 0;
+	padding-left: 15px;
+}
+.discount-form__btn
+{
+	height: 40px;
+	border-radius: 5px;
+	border: 1px solid white;
+	font-family: Roboto;
+	font-size: 14px;
+	font-weight: 500;
+	color: white;
+	margin-bottom: 20px;
+}
+.discount-container
+{
+	display: flex;
+    align-self: center;
+	position: relative;
+	flex-direction: column;
+}
+/*--------------------------------------------------Adaptive-----------------------------------------------------------------*/
+@media (min-width: 550px) {
+	.discount-text > br
+	{
+		display: none;
+	}
+	.discount-form
+	{
+		flex-direction: unset;
+	}
+	.discount-form__input
+	{
+    	width: 418px;
+    	margin-right: 10px;
+	}
+	.discount-form__btn
+	{
+	    align-self: center;
+	    margin: 0;
+	    padding: 0 25px;
+	}
+	.discount{ height: 105px; }
+}
+@media (min-width: 1140px)
+{
+	.discount-text{ margin-right: 14px; }
+	.discount
+	{
+		padding-bottom: 0;
+		justify-content: center;
+	}
+	.discount-container {flex-direction: unset;}
+}

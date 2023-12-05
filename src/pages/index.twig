@@ -1,0 +1,10 @@
+{% extends "@layouts/layout.twig" %}
+
+{% block page %}
+		{% include '@blocks/mainblock/mainblock.twig' %}
+		{% include '@blocks/books/books.twig' with {'title': 'Новые поступления'}%}
+		{% include '@blocks/discount/discount.twig'%}
+		{% include '@blocks/books/books.twig' with {'title': 'Готовятся к выходу'}%}
+		{% include '@blocks/advantages/advantages.twig'%}
+		{% include '@blocks/news/news.twig'%}
+{% endblock %}
