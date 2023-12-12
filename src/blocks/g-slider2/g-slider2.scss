@@ -1,0 +1,158 @@
+.g-slider2
+{
+	grid-area: 1 / 1 / 2 / 2;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 43vw;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 10px;
+	margin-top: 10px;
+}
+.g-slider2__pics
+{
+	position: absolute;
+	width: 100%;
+	height: 43vw;
+	display: flex;
+    align-items: center;
+	overflow: hidden;
+	img
+	{
+		width: 100%;
+		padding: 0 10px;
+	}
+}
+.g-slider2__btns
+{
+	margin-top: 30px;
+	margin-bottom: 20px;
+	display: flex;
+	position: relative;
+	z-index: 100;
+}
+.g-slider2__img
+{
+	width: 22vw;
+	height: 15vw;
+	margin-top: 8vw;
+}
+.g-slider2__btns-item
+{
+	width: 25px;
+	height: 2px;
+	border: none;
+	background: #FFFFFF80;
+	margin-left: 5px;
+	&:first-child
+	{
+		background-color: white;
+		margin-left: 0;
+	}
+}
+.g-slider2__routing
+{
+	display: flex;
+	align-items: center;
+	margin-top: 25px;
+}
+.g-slider2__routing > button
+{
+	width: 40px;
+	height: 40px;
+	border: none;
+	border-radius: 5px;
+	background-color: #F7FFEE;
+	display: none;
+	position: relative;
+	z-index: 100;
+}
+/*--------------------------------------------------------------Adaptive------------------------------------------------------*/
+@media (min-width: 780px)
+{
+	.g-slider2
+	{
+		grid-area: 1 / 1 / 2 / 3;
+		margin-bottom: 30px;
+		width: 750px;
+		height: 350px;
+		padding: 0 27px;
+	}
+	.g-slider2__pics
+	{
+		position: absolute;
+		width: 100%;
+		height: 43vw;
+		display: flex;
+	    align-items: center;
+		overflow: hidden;
+		img
+		{
+			width: 100%;
+			padding: 0;
+			transition: .3s
+		}
+	}
+	.g-slider2__pics
+	{
+		width: 750px;
+		height: 350px;
+
+	}
+	.g-slider2__img
+	{
+		width: 167px;
+    	height: 114px;
+		margin-top: 0;
+	}
+	.g-slider2__routing > button
+	{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		margin-top: 25px;
+	}
+	.g-slider2__routing-btn--pic
+	{
+		width: 20px;
+		height: 20px;
+	}
+	.g-slider2__routing
+	{
+	    justify-content: space-between;
+	    display: flex;
+	    align-items: center;
+	    width: 100%;
+	    margin-top: 130px
+	}
+	.g-slider2__routing-btn
+	{
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
+
+}
+@media (min-width: 1140px) {
+	.g-slider2__routing
+	{
+		margin-top: 120px;
+	}
+	.g-slider2__btns
+	{
+		display: flex;
+	}
+	.g-slider2__routing-btn--pic
+	{
+		width: 20px;
+		height: 20px;
+	}
+	.g-slider2
+	{
+		grid-area: 1 / 1 / 2 / 3;
+		margin: 0;
+	}
+}

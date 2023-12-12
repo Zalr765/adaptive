@@ -27,9 +27,9 @@ import '@a/js/slick.min.js';
 /* ====================#1ef Blocks #1ef==================== */
 
 import '@b/g-select/g-select.js';
-
 /* ====================#1ef Blocks #1ef==================== */
-
+import '@b/g-slider1/g-slider1.js';
+import '@b/g-slider2/g-slider2.js';
 
 
 /* ====================#fff Pages #fff ==================== */

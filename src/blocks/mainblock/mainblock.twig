@@ -1,17 +1,5 @@
 <main class="mainblock">
-	<div class="mainblock-slider">
-		<div class="mainblock-slider__routing">
-			<button class="mainblock-slider__routing-btn"> <div class="mainblock-slider__routing-btn--pic"><img src="./svg/mainblock/slider-left.svg" alt=""></div></button>
-			<img src="./svg/mainblock/slider-pic.svg" alt="" class="mainblock-slider__img">
-			<button class="mainblock-slider__routing-btn"> <div class="mainblock-slider__routing-btn--pic"><img src="./svg/mainblock/slider-right.svg" alt=""></div></button>
-		</div>
-		<div class="mainblock-slider__btns">
-			<button class="mainblock-slider__btns-item"></button>
-			<button class="mainblock-slider__btns-item"></button>
-			<button class="mainblock-slider__btns-item"></button>
-			<button class="mainblock-slider__btns-item"></button>
-		</div>
-	</div>
+	{% include '@blocks/g-slider2/g-slider2.twig' %}
 	<div class="mainblock-daybook">
 		<div class="mainblock-daybook__toptext">
 			<h2 class="mainblock-daybook__toptext-start">Книга дня</h2>
@@ -39,5 +27,4 @@
 		<img src="./svg/mainblock/kaef_bg.svg" alt="" class="mainblock-promotion__bg2">
 		<img src="./img/kaef.png" alt="" class="mainblock-promotion__pic">
 	</div>
-
 </main>

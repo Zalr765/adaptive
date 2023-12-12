@@ -15,7 +15,8 @@
 .mainblock-slider
 {
 	grid-area: 1 / 1 / 2 / 2;
-	background-color: #CCFF90;
+	background: url('/svg/mainblock/slider.svg');
+	background-position: center;
 	display: flex;
 	flex-direction: column;
 	width: 95vw;
@@ -26,9 +27,9 @@
 }
 .mainblock-slider__btns
 {
-	margin-top: 36px;
-	display: none;
+	margin-top: 30px;
 	margin-bottom: 20px;
+	display: flex;
 }
 .mainblock-slider__img
 {
@@ -313,6 +314,16 @@
 	.mainblock-slider__routing > button
 	{
 		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		margin-top: 25px;
+	}
+	.mainblock-slider__routing-btn--pic
+	{
+		width: 20px;
+		height: 20px;
 	}
 	.mainblock-slider__routing
 	{
