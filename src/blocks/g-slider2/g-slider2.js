@@ -1,81 +1,63 @@
-o2.second_selectors =
- {
-	left : document.getElementById("g-slider2__left"),
-	right : document.getElementById("g-slider2__right"),
-	sliderBg : document.querySelector(".g-slider2"),
-	sliderBtn : document.querySelector(".g-slider2__btns"),
-	buttons: document.querySelectorAll(".g-slider2__routing-btn")
-}
 o2.second_sldier =
 {
-	// slider : document.querySelector(".g-slider2"),
-	// btns : this.slider.querySelector(".g-slider2__btns").children,
-	// pics : this.slider.querySelector(".g-slider2__pics"),
-	counter : 0,
-	left(btn)
+	right(item)
 	{
-		let i = this.counter;
-		let pics = btn.parentElement.parentElement.querySelector(".g-slider2__pics");
-		let btns = btn.parentElement.parentElement.querySelector(".g-slider2__btns").children;
-		if(i === 0)
-			i = pics.children.length -1
-		else
-			i--;
-
-		for (elm of pics.children)
-		{
-			elm.style.transform = `translateX( calc(-100% * ${i}))`
-		}
-
-		for (elm of  btns){
-			elm.style.background = "#FFFFFF80"
-		}
-		btns[i].style.background = "white";
-
+		let pics = item.parentElement.parentElement.querySelector(".g-slider2__pics");
+		let pic = pics.querySelector(".active");
+		let index = Array.from(pics.children).indexOf(pic);
+		let btns = pics.parentElement.querySelector(".g-slider2__btns").children
+		pic.classList.remove("active")
 		for (elm of btns){
-			elm.onclick = (function(){
-			    let index = Array.from(btns).indexOf(this);
-
-			    for (elm of  btns){
-					elm.style.background = "#FFFFFF80"
-				}
-
-				i = [index][0]
-				for (elm of pics.children){
-					elm.style.transform = `translateX( calc(-100% * ${i}))`
-				}
-				btns[i].style.background = "white"
-			})
+			elm.style.background = "#FFFFFF80";
 		}
-		return this.counter = i
+		if(index === pics.children.length - 1){
+			pics.children[0].classList.add("active");
+			btns[0].style.background = "white"
+			for (elm of pics.children){
+				elm.style.transform = `translateX(0)`;
+			}
+		}
+		else{
+			pics.children[index+1].classList.add("active");
+			btns[index+1].style.background = "white"
+			for (elm of pics.children){
+				elm.style.transform = `translateX( calc(-100% * ${index+1}))`;
+			}
+		}
 	},
-	right(btn)
+	left(item)
 	{
-		let i = this.counter;
-		let pics = btn.parentElement.parentElement.querySelector(".g-slider2__pics");
-		let btns = btn.parentElement.parentElement.querySelector(".g-slider2__btns").children;
-		if(i === pics.children.length -1)
-			i = 0
-		else
-			i++
-
-		for (elm of pics.children){
-			elm.style.transform = `translateX( calc(-100% * ${i}))`
+		let pics = item.parentElement.parentElement.querySelector(".g-slider2__pics");
+		let pic = pics.querySelector(".active");
+		let index = Array.from(pics.children).indexOf(pic);
+		let btns = pics.parentElement.querySelector(".g-slider2__btns").children;
+		for (elm of btns){
+			elm.style.background = "#FFFFFF80";
 		}
-		for (elm of  btns){
-			elm.style.background = "#FFFFFF80"
+		pic.classList.remove("active")
+		if(index === 0){
+			pics.children[pics.children.length - 1].classList.add("active")
+			btns[pics.children.length - 1].style.background = "white"
+			for (elm of pics.children){
+				elm.style.transform = `translateX( calc(-100% * ${pics.children.length - 1}) )`;
+			}
 		}
-		btns[i].style.background = "white";
-		return this.counter = i
+		else{
+			pics.children[index-1].classList.add("active");
+			btns[index-1].style.background = "white"
+			for (elm of pics.children){
+				elm.style.transform = `translateX( calc(-100% * ${index-1}) )`;
+			}
+		}
 	},
 	move(item)
 	{
-		let i = this.counter;
 		let btns = item.parentElement.children;
 		let pics = item.parentElement.parentElement.querySelector(".g-slider2__pics");
-		console.log(btns)
 		let index = Array.from(btns).indexOf(item);
 		i = [index][0];
+		pics.querySelector(".active").classList.remove("active")
+		pics.children[i].classList.add("active")
 		for (elm of btns){
 			elm.style.background = "#FFFFFF80";
 		}
@@ -83,54 +65,5 @@ o2.second_sldier =
 			elm.style.transform = `translateX( calc(-100% * ${i}))`
 		}
 		item.style.background = "white"
-		// for (elm of btns){
-		// 	elm.onclick = (function(){
-		// 	    let index = Array.from(btns).indexOf(this);
-
-		// 	    for (elm of  btns){
-		// 			elm.style.background = "#FFFFFF80"
-		// 		}
-
-		// 		i = [index][0]
-		// 		for (elm of pics.children){
-		// 			elm.style.transform = `translateX( calc(-100% * ${i}))`
-		// 		}
-		// 		btns[i].style.background = "white"
-		// 	})
-		// }
-		return this.counter = i
 	}
-
-
-// 	right.onclick = function ()
-// 	{
-// 		if(i === pics.children.length -1)
-// 			i = 0
-// 		else
-// 			i++
-
-// 		for (elm of pics.children){
-// 			elm.style.transform = `translateX( calc(-100% * ${i}))`
-// 		}
-// 		for (elm of  btns){
-// 			elm.style.background = "#FFFFFF80"
-// 		}
-// 		btns[i].style.background = "white";
-// 	}
-// 	for (elm of btns){
-// 	elm.onclick = (function(){
-// 	    let index = Array.from(btns).indexOf(this);
-
-// 	    for (elm of  btns){
-// 			elm.style.background = "#FFFFFF80"
-// 		}
-
-// 		i = [index][0]
-// 		for (elm of pics.children){
-// 			elm.style.transform = `translateX( calc(-100% * ${i}))`
-// 		}
-// 		btns[i].style.background = "white"
-// 		console.log(i)
-// 	})
-// 	}
 }
